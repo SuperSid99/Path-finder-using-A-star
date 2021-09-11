@@ -100,8 +100,7 @@ def Get_Heuristic(b,g_x_cord,g_y_cord):
         x_dist = (g_x_cord-x)
         for y in range(len(b[x])):
             y_dist = (g_y_cord-y)
-            dist_from_goal= int(math.sqrt(((x_dist**2) +(y_dist**2))))
-            docfg[x,y]=dist_from_goal
+            docfg[x,y]=abs(x_dist)+abs(y_dist)
     return(docfg)
 
 
